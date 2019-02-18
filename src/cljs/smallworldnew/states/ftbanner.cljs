@@ -3,7 +3,7 @@
 
 (def ftbanner (atom [   {   :id 1
                             :image "/images/blurb-1.png"
-                            :title "buildings Startup Community"
+                            :title "Buildings Startup Community"
                             :tag "Estonia’s Icefire: the fine art of financial technology",}
                         {   :id 2
                             :image "/images/blurb-2.png"

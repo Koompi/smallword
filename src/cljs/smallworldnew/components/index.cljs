@@ -2,7 +2,7 @@
   (:require [smallworldnew.states.news :refer [news]]
             [smallworldnew.states.ftbanner :refer [ftbanner]]
             [smallworldnew.components.bannerIndex :refer [bannerIndex]]))
-          
+
 (defn toggleModal
     [id]
     (swap! news assoc-in [id :modal] (not (get-in news [id :modal]))))
@@ -28,11 +28,11 @@
         [:div [:center
                 [:div.pop
                     [:div {:class "ui four column grid"}
-                    (map (fn [item]
-                            [:div.column {:key (:id item)}
-                                [:a {:class "newsDetail"}
-                                    [:img {:src (:image item)  :class "ui image"}]]])
-                        @news)]]]]
+                     (map (fn [item]
+                             [:div.column {:key (:id item)}
+                                 [:a {:class "newsDetail"}
+                                     [:img {:src (:image item)  :class "ui image"}]]])
+                         @news)]]]]
         [:div {:class "actions"}
          [:div {:class "ui red deny button" :onClick (fn [] (closeModal id))} "Close"]]]])
 
@@ -44,10 +44,11 @@
          [:div {:class "ui stackable four column grid"}
           (map (fn [item]
                    [:div.column {:key (:id item)}
-                    [:a {:class "newsDetailo"}
-                        [:img {:src (:image item)  :class "ui fluid image"}]
-                        [:h4 (:title item)]
-                        [:p (:tag item)]]]) @ftbanner)]]])
+                    [:center
+                     [:div {:class "newsDetailo"}
+                         [:img {:src (:image item)}]
+                         [:h4 (:title item)]
+                         [:p (:tag item)]]]]) @ftbanner)]]])
 
 (defn information
     []
@@ -59,7 +60,7 @@
                   [:p "What is it like to run a business in Estonia? How to benefit from the e-solutions and the efficiency of our business culture? What are the opportunities in specific sectors?"]
                   [:p "What is it like to run a business in Estonia?"]
                   [:button {:class "ui basic button btnInformation"} "CONTACT US"]]]]])
-                
+
 
 (defn newsAndEvents
     [id]
@@ -68,11 +69,11 @@
         [:div {:class "ui stackable four column grid"}
          (map (fn [item]
                   [:div.column {:key (:id item)}
-                   [:a {:class "newsDetail" :href "#" }
+                   [:a {:class "newsDetail" :href "#"}
                        [:img {:src (:image item)  :class "ui fluid image"}]
                        [:h3 (:title item)]
                        [:p (:tag item)]]]) @news)]])
-        [:button {:onClick (fn [] (toggleModal (1)))} "Hello word"]
+[:button {:onClick (fn [] (toggleModal (1)))} "Hello word"]
 (defn index
   []
   [:div

@@ -14,7 +14,7 @@
 (defn readmore
 
   [id image title desc]
-  [:div
+  [:div.modalBack
    [:div {:class "ui standard modal transition visible active" :style {:display "block" :position "fixed" :top "25%" :left "25%"}}
     [:i {:class "close icon" :onClick (fn [] (closeModal id))}]
     [:div {:class "header"} "Profile Picture"]
@@ -44,35 +44,36 @@
     [:div.backAbout {:key id}
       [:div.ui.container
           [:div {:class "ui stackable two column grid centerme"}
-              [:div.column
+              [:div.column.nine.wide
+                [:div.descTitle1
                   [:h1 title]
                   [:p desc]
                   (if link [:button {
                                      :style {:background "none" :border "none"}
                                      :onClick (fn [] (toggleModal (- id 1)))}
-                                    "Read more.." ""])]
-              [:div.column
+                                    "Read more..." ""])]]
+              [:div.column.seven.wide
                 [:div.mobile
                   [:img {:src image}]]]
               (if modal [readmore (- id 1) image title desc ] "")]]]
     [:div.backAbout {:key id}
       [:div.ui.container
           [:div {:class "ui stackable two column grid centerme"}
-              [:div.column
+              [:div.column.seven.wide
                 [:div.mobileimg
                   [:img {:src image}]]
                 [:div.descTitle
                     [:h1 title]
                     [:p desc]
-                    (if link [:a {:href link} "Read More.."] "")]]
-              [:div.column
+                    (if link [:a {:href link} "Read More..."] "")]]
+              [:div.column.nine.wide
                 [:div.descTitle1
                   [:h1 title]
                   [:p desc]
                   (if link [:button {
                                      :style {:background "none" :border "none" :cursor "pointer"}
                                      :onClick (fn [] (toggleModal (- id 1)))}
-                             "Read more.." ""])]
+                             "Read more..." ""])]
                 [:div.mobileimg1
                   [:img {:src image}]]]]
           (if modal [readmore (- id 1)  image title desc ] "")]]))
