@@ -410,6 +410,9 @@ img.imgfooter {
  }
 
 @media only screen and (max-width : 1440px) {
+  .backBanner {
+    height: 58vw !important;
+}
   .bannerContent {width: 50% ;
     padding-top: 0%;
     padding-left: 8%;}
@@ -510,7 +513,7 @@ img.imgfooter {
       display:none;
     }
     .backBanner{
-      height: 73vw !important;
+      height: 100vw !important;
     }
     .bannerContent {
       width: 67%;
@@ -545,7 +548,10 @@ img.imgfooter {
   .imenu{ display: block;}
   .mobilenav{display: block;}
   .hd {display:none;}
-  .backBanner{ height: 150vw !important; }
+  .backBanner {
+    height: 142vw !important;
+    background: #481b7c;
+  }
   .bannerContent { width: 100%}
   .bannerContent .paragraph { padding: 14px 0px;  }
   button.ui.basic.button.btnLearnMore { margin: 0;     padding: 10px 30px;
