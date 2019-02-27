@@ -11,8 +11,12 @@
   color: #333;
   line-height: 1.5em;
 }
+.dropdown.icon {
+  font-family: fontawesome !important;
+}
 i.icon.bars{
   font-size: 30px;
+  font-family: fontawesome !important;
 }
 *{
   font-family: 'Roboto', sans-serif !important;
