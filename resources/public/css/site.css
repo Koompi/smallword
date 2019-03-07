@@ -1,5 +1,6 @@
 /* @import "mediacss.css"; */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
 
 
 .body-container {
@@ -19,7 +20,7 @@ i.icon.bars{
   font-family: fontawesome !important;
 }
 *{
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Nunito', sans-serif !important;
 }
 h1, h2, h3 {
   color: #95a5a6;
